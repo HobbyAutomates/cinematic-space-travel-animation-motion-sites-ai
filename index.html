@@ -342,8 +342,8 @@
             style={{ width: '120%', height: '120%' }}
           />
 
-          {/* Bottom gradient — smooth transition into the persistent video */}
-          <div className="absolute bottom-0 left-0 right-0 h-[350px] z-[2]" style={{ background: 'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.5) 30%, rgba(0,0,0,0.85) 70%, rgba(0,0,0,0.4) 100%)' }} />
+          {/* Bottom gradient — smooth transition into the persistent video below */}
+          <div className="absolute bottom-0 left-0 right-0 h-[300px] z-[2]" style={{ background: 'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.4) 40%, rgba(0,0,0,0.7) 70%, transparent 100%)' }} />
 
           <div className="relative z-10 flex flex-col h-full">
             <Navbar />
@@ -394,35 +394,35 @@
                 animate={{ filter: 'blur(0px)', opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: 'easeOut', delay: 1.3 }}
               >
-                <div className="liquid-glass rounded-[1.25rem] p-5 w-[220px] flex flex-col">
+                <div className="liquid-glass rounded-[1.25rem] px-6 py-5 w-[260px]">
                   <ClockIcon />
-                  <div className="mt-auto">
+                  <div className="mt-3">
                     <span className="font-heading italic text-white text-4xl tracking-[-1px] leading-none">10+ Hrs</span>
-                    <p className="text-xs text-white font-body font-light mt-2">Saved Per Client Every Week</p>
+                    <p className="text-xs text-white/80 font-body font-light mt-1.5">Saved Per Client Every Week</p>
                   </div>
                 </div>
-                <div className="liquid-glass rounded-[1.25rem] p-5 w-[220px] flex flex-col">
+                <div className="liquid-glass rounded-[1.25rem] px-6 py-5 w-[260px]">
                   <GlobeIcon />
-                  <div className="mt-auto">
+                  <div className="mt-3">
                     <span className="font-heading italic text-white text-4xl tracking-[-1px] leading-none">3</span>
-                    <p className="text-xs text-white font-body font-light mt-2">Markets Served Globally</p>
+                    <p className="text-xs text-white/80 font-body font-light mt-1.5">Markets Served Globally</p>
                   </div>
                 </div>
               </motion.div>
             </div>
 
             <motion.div
-              className="flex flex-col items-center gap-4 pb-8"
+              className="flex flex-col items-center gap-3 pb-12"
               initial={{ filter: 'blur(10px)', opacity: 0, y: 20 }}
               animate={{ filter: 'blur(0px)', opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: 'easeOut', delay: 1.4 }}
             >
-              <div className="liquid-glass rounded-full px-3.5 py-1 text-xs font-medium text-white font-body">
+              <div className="liquid-glass rounded-full px-4 py-1.5 text-xs font-medium text-white/90 font-body">
                 Trusted by leading architecture & design firms
               </div>
-              <div className="flex items-center gap-12 md:gap-16">
+              <div className="flex items-center gap-10 md:gap-14">
                 {['Featherlite', 'Hundred Hands', 'Spoken', 'Atelier', 'Espace'].map((name) => (
-                  <span key={name} className="font-heading italic text-white text-2xl md:text-3xl tracking-tight">{name}</span>
+                  <span key={name} className="font-heading italic text-white/80 text-xl md:text-2xl tracking-tight">{name}</span>
                 ))}
               </div>
             </motion.div>
@@ -496,6 +496,11 @@
 
           {/* Dark vignette scrim — lets video breathe through while keeping text readable */}
           <div className="absolute inset-0 z-[1]" style={{ background: 'radial-gradient(ellipse at 50% 50%, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.6) 100%)' }} />
+
+          {/* Top transition gradient from hero */}
+          <div className="absolute top-0 left-0 right-0 h-[200px] z-[2]" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, transparent 100%)' }} />
+          {/* Bottom transition gradient into portfolio */}
+          <div className="absolute bottom-0 left-0 right-0 h-[200px] z-[2]" style={{ background: 'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.7) 100%)' }} />
 
           <div ref={ref} className="relative z-10 px-8 md:px-16 lg:px-20 pt-24 pb-10 flex flex-col min-h-screen">
             <motion.div
@@ -594,6 +599,11 @@
 
           {/* Dark vignette scrim */}
           <div className="absolute inset-0 z-[1]" style={{ background: 'radial-gradient(ellipse at 50% 50%, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.65) 100%)' }} />
+
+          {/* Top transition gradient */}
+          <div className="absolute top-0 left-0 right-0 h-[200px] z-[2]" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, transparent 100%)' }} />
+          {/* Bottom transition gradient */}
+          <div className="absolute bottom-0 left-0 right-0 h-[200px] z-[2]" style={{ background: 'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.7) 100%)' }} />
 
           <div ref={ref} className="relative z-10 px-8 md:px-16 lg:px-20 pt-32 pb-20 flex flex-col min-h-screen">
             <motion.div
@@ -723,6 +733,9 @@
 
           {/* Dark vignette scrim */}
           <div className="absolute inset-0 z-[1]" style={{ background: 'radial-gradient(ellipse at 50% 50%, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.65) 100%)' }} />
+
+          {/* Top transition gradient */}
+          <div className="absolute top-0 left-0 right-0 h-[200px] z-[2]" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, transparent 100%)' }} />
 
           <div ref={ref} className="relative z-10 px-8 md:px-16 lg:px-20 pt-32 pb-20 flex flex-col min-h-screen justify-center">
             <motion.div
